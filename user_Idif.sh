@@ -1,11 +1,15 @@
-#!/bin/bash
-
-export DEBIAN_FRONTEND='non-interactive'
-
-echo -e "slapd slapd/root_password password admin" |debconf-set-selections
-echo -e "slapd slapd/root_password_again password admin" |debconf-set-selections
-echo -e "slapd slapd/internal/adminpw password test" |debconf-set-selections
-echo -e "slapd slapd/internal/generated_adminpw password admin" |debconf-set-selections
-echo -e "slapd slapd/password2 password admin" |debconf-set-selections
-echo -e "slapd slapd/password1 password admin" |debconf-set-selections
-dpkg-reconfigure slapd
+dn: uid=student,ou=People,dc=clemson,dc=cloudlab,dc=us
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: student
+sn: Ram
+givenName: Golden
+cn: student
+displayName: student
+uidNumber: 10000
+gidNumber: 5000
+userPassword: 
+gecos: Golden Ram
+loginShell: /bin/dash
+homeDirectory: /home/student
