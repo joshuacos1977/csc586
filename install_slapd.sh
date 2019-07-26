@@ -18,3 +18,4 @@ echo -e "slapd slapd/allow_ldap_v2 boolean false" | sudo debconf-set-selections
 echo -e "slapd slapd/no_configuration boolean false" | sudo debconf-set-selections
 
 sudo apt install -y slapd ldap-utils
+sudo ufw allow ldap
