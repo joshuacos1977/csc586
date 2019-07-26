@@ -1,13 +1,10 @@
-dn:
-ou=People,dc=clemson,dc=cloudlab,dc=us
+dn:ou=People,dc=clemson,dc=cloudlab,dc=us
 objectClass: organizationalUnit
 ou: People
-dn:
-ou=Groups,dc=clemson,dc=cloudlab,dc=us
+dn:ou=Groups,dc=clemson,dc=cloudlab,dc=us
 objectClass: organizationalUnit
 ou: Groups
-dn:
-cn=CSC,ou=Groups,dc=clemson,dc=cloudlab,
+dn:cn=CSC,ou=Groups,dc=clemson,dc=cloudlab,
 dc=us
 objectClass: posixGroup
 cn: CSC586
