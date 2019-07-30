@@ -1,5 +1,4 @@
-dn:
-uid=student,ou=People,dc=clemson,dc=cloudlab,dc=us
+dn: uid=student,ou=People,dc=clemson,dc=cloudlab,dc=us
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
@@ -10,7 +9,7 @@ cn: student
 displayName: student
 uidNumber: 10000
 gidNumber: 5000
-userPassword:
+userPassword: {SSHA}TOL9DTDPu3A7C6VwpRHIBp7EhJWCjhCY
 gecos: Golden Ram
-loginShell:/bin/dash
-homeDirectory:/home/student
+loginShell: /bin/dash
+homeDirectory: /home/student
