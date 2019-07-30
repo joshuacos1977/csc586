@@ -7,7 +7,7 @@ objectClass: organizationalUnit
 ou: Groups
 
 dn: cn=CSC,ou=Groups,dc=clemson,dc=cloudlab,dc=us
-objectClass: posixGroup
+obhjectClass: posixGroup
 cn: CSC586
 gidNumber: 5000
 
