@@ -9,7 +9,10 @@ cn: student
 displayName: student
 uidNumber: 10000
 gidNumber: 5000
-userPassword: {SSHA}TOL9DTDPu3A7C6VwpRHIBp7EhJWCjhCY
+userPassword: {SSHA}kn41jlD0bbaf+tpghCwIOoJ/gxwDQef
+cn: CSC586
+gidNumber: 5000
+gidNumber: 5000
 gecos: Golden Ram
 loginShell: /bin/dash
 homeDirectory: /home/student
