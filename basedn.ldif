@@ -4,8 +4,7 @@ ou: People
 dn: ou=Groups,dc=clemson,dc=cloudlab,dc=us
 objectClass: organizationalUnit
 ou: Groups
-dn: cn=CSC,ou=Groups,dc=clemson,dc=cloudlab,
-dc=us
+dn: cn=CSC,ou=Groups,dc=clemson,dc=cloudlab,dc=us
 objectClass: posixGroup
 cn: CSC586
 gidNumber: 5000
