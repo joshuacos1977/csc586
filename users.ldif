@@ -12,7 +12,6 @@ gidNumber: 5000
 userPassword: {SSHA}kn41jlD0bbaf+tpghCwIOoJ/gxwDQef
 cn: CSC586
 gidNumber: 5000
-gidNumber: 5000
 gecos: Golden Ram
 loginShell: /bin/dash
 homeDirectory: /home/student
