@@ -28,7 +28,14 @@ for i in range(2):
   iface.component_id = "eth1"
   iface.addAddress(pg.IPv4Address(prefixForIP + str(i + 1), "255.255.255.0"))
   link.addInterface(iface)
-  
-# Print the RSpec to the enclosing page.
+ 
+  if i == 0:
+    node.addService(pg.Execute(shell="sh", command="sudo chmod 755 /local/repository/install_slapd.sh"))
+    node.addService(pg.Execute(shell="sh", command="/local/repository/install_slapd.sh"))
+  else:
+    node.addService(pg.Execute(shell="sh", command="sudo chmod 755 /local/repository/install_client.sh"))
+    node.addService(pg.Execute(shell="sh", command="/local/repository/install_client.sh"))
+
+    # Print the RSpec to the enclosing page.
 pc.printRequestRSpec(request)
 
