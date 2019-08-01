@@ -23,26 +23,3 @@ sudo apt-get install -y slapd ldap-utils
 sudo ufw allow ldap 
 
 
-# Generate password hash
-PASS=$(slappasswd -s rammy)
-cat <<EOF >/local/repository/users.ldif
-dn: uid=student,ou=People,dc=clemson,dc=cloudlab,dc=us
-objectClass: inetOrgPerson
-objectClass: posixAccount
-objectClass: shadowAccount
-uid: student
-sn: Ram
-givenName: Golden
-cn: student
-displayName: student
-uidNumber: 10000
-gidNumber: 5000
-userPassword: $PASS
-gecos: Golden Ram
-loginShell: /bin/dash
-homeDirectory: /home/student
-EOF
-# Populate LDAP
-ldapadd -x -D cn=admin,dc=clemson,dc=cloudlab,dc=us -w admin -f basedn.ldif
-ldapadd -x -D cn=admin,dc=clemson,dc=cloudlab,dc=us -w admin -f users.ldif
-
