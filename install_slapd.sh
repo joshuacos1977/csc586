@@ -44,7 +44,7 @@ loginShell: /bin/dash
 homeDirectory: /home/student
 EOF
 # Populate LDAP
-ldapadd -x -D cn=admin,dc=clemson,dc=cloudlab,dc=us -w royal -f users.ldif 
+ldapadd -x -D cn=admin,dc=clemson,dc=cloudlab,dc=us -w admin -f users.ldif 
 
 # Test LDAP
 ldapsearch -x -LLL -b dc=clemson,dc=cloudlab,dc=us 'uid=student' cn gidNumber
