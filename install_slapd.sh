@@ -17,7 +17,7 @@ echo -e "slapd slapd/move_old_database boolean true" | sudo debconf-set-selectio
 echo -e "slapd slapd/allow_ldap_v2 boolean false" | sudo debconf-set-selections
 echo -e "slapd slapd/no_configuration boolean false" | sudo debconf-set-selections
 
-# Installs slapd and ldap-utils 
+# Install slapd and ldap-utils 
 sudo apt-get install -y slapd ldap-utils
 # Enable firewall rule 
 sudo ufw allow ldap 
