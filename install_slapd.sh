@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update
-# Install openLDAP server quietly
+# Install openLDAP server as noninteractive
 export DEBIAN_FRONTEND='non-interactive'
 echo -e "slapd slapd/root_password password admin" | sudo debconf-set-selections
 echo -e "slapd slapd/root_password_again password admin" | sudo debconf-set-selections
@@ -17,7 +17,7 @@ echo -e "slapd slapd/move_old_database boolean true" | sudo debconf-set-selectio
 echo -e "slapd slapd/allow_ldap_v2 boolean false" | sudo debconf-set-selections
 echo -e "slapd slapd/no_configuration boolean false" | sudo debconf-set-selections
 
-# Grab slapd and ldap-utils (pre-seeded)
+# Installs slapd and ldap-utils 
 sudo apt-get install -y slapd ldap-utils
 # Enable firewall rule 
 sudo ufw allow ldap 
