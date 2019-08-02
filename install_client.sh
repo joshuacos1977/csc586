@@ -46,6 +46,5 @@ sudo chmod 600 /etc/ldap.secret
 
 #auhtenticate student on ldapclient 
 getent passwd student
-
 sudo su - student
 
